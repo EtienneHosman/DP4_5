@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Reiziger" table="REIZIGER">
+        <id name="reizigerNummer" type="int">
+            <column name="REIZIGERID"></column>
+            <generator class="assigned"></generator>
+        </id>
+
+        <property name="voorletters" type="java.lang.String">
+            <column name="VOORLETTERS"/>
+        </property>
+        <property name="tussenvoegsel" type="java.lang.String">
+            <column name="TUSSENVOEGSEL"/>
+        </property>
+        <property name="achternaam" type="java.lang.String">
+            <column name="ACHTERNAAM"></column>
+        </property>
+        <property name="gbdatum">
+            <column name="GEBORTEDATUM"/>
+        </property>
+    </class>
+</hibernate-mapping>

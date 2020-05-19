@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="OVChipkaart" table="OV_CHIPKAART">
+        <id name="kaartnummer" type="int" column="KAARTNUMMER">
+            <generator class="assigned"/>
+        </id>
+        <property name="geldigTot" type="date" column="GELDIGTOT"/>
+        <property name="klasse" type="int" column="KLASSE"/>
+        <property name="saldo" type="double" column="SALDO"/>
+        <property name="reiziger" type="int" column="REIZIGERID"/>
+    </class>
+</hibernate-mapping>

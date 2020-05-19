@@ -19,16 +19,16 @@ public class OVChipkaart {
 
     @ManyToOne(targetEntity = Reiziger.class)
     @JoinColumn(name = "REIZIGERID")
-    private Reiziger reiziger;
+    private int reizigerId;
 
     public OVChipkaart(){}
 
-    public OVChipkaart(int kaartnummer, Date geldigTot, int klasse, double saldo, Reiziger reiziger){
+    public OVChipkaart(int kaartnummer, Date geldigTot, int klasse, double saldo, int reizigerId){
         this.kaartnummer = kaartnummer;
         this.geldigTot = geldigTot;
         this.klasse = klasse;
         this.saldo = saldo;
-        this.reiziger = reiziger;
+        this.reizigerId = reizigerId;
     }
 
     public int getKaartnummer() {
@@ -63,11 +63,11 @@ public class OVChipkaart {
         this.saldo = saldo;
     }
 
-    public Reiziger getReiziger() {
-        return reiziger;
+    public int getReiziger() {
+        return reizigerId;
     }
 
-    public void setReiziger(Reiziger reiziger) {
-        this.reiziger = reiziger;
+    public void setReiziger(int reiziger) {
+        this.reizigerId = reizigerId;
     }
 }

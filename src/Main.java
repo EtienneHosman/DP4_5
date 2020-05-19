@@ -24,7 +24,7 @@ public class Main {
     Reiziger reiziger1 = new Reiziger(102,"E.M.","","Hosman", java.sql.Date.valueOf("1998-03-15"));
     //ReizigerService.getService().create(reiziger1);
 
-    OVChipkaart ov = new OVChipkaart(100, java.sql.Date.valueOf("2021-05-20"), 2, 5000.00,reiziger1);
+    OVChipkaart ov = new OVChipkaart(100, java.sql.Date.valueOf("2021-05-20"), 2, 5000.00,reiziger1.getReizigerNummer());
 
 
     reiziger1.addChipkaart(ov);
